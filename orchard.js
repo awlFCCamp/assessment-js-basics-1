@@ -85,7 +85,7 @@ console.log(`Total Acres is ${totalAcres}`);
 */
 
 // CODE HERE
-
+//totalAcres divided by the number of days picked to get the average daily acres
 let averageDailyAcres = totalAcres / fujiAcres.length;
 console.log(`Average Daily Acres is ${averageDailyAcres}`);
 
@@ -122,6 +122,7 @@ let acresLeft = 174;
 let days = 0;
 
 // CODE HERE
+//use while loop to calculate days to work on the acres left, each iteration decreases the acrea left by the average daily acres
 while (acresLeft > 0) {
   days += 1;
   acresLeft -= averageDailyAcres;
@@ -154,7 +155,7 @@ console.log(days);
 // CODE HERE
 const eachAcreYield = 6.5;
 
-//approach #1 use empty arrays
+//approach #1 use empty arrays loop through each acres array, multiply by each acre yield and push them onto the each tons array
 let fujiTons = [];
 let galaTons = [];
 let pinkTons = [];
@@ -206,6 +207,7 @@ let galaPounds = 0;
 let pinkPounds = 0;
 
 //approach #1 using for loop
+//use for loop to get the sum for each apple in pound
 
 for (let i = 0; i < fujiTons.length; i++) {
   fujiPounds += fujiTons[i] * 2000;
@@ -245,7 +247,7 @@ console.log(`Total number of pounds pinked for pink is ${pinkPounds}`);
 */
 
 // CODE HERE
-
+//multiple each apple pounds with apple price to get the apple profit in cents
 let fujiProfit = fujiPounds * fujiPrice;
 let galaProfit = galaPounds * galaPrice;
 let pinkProfit = pinkPounds * pinkPrice;
@@ -264,5 +266,6 @@ console.log(`Pink profit is ${pinkProfit} cents`);
 */
 
 // CODE HERE
+//add up all apples profits
 let totalProfit = fujiProfit + galaProfit + pinkProfit;
 console.log(`Total profit is ${totalProfit}`);
